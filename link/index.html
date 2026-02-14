@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Components | TortoiseShell</title>
+  <style>
+    /* 同じスタイル使い回し */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #1a1a1a;
+      color: #fff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .l-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .c-breadcrumb {
+      margin-bottom: 2rem;
+    }
+
+    .c-breadcrumb__link {
+      color: #fff;
+      transition: all .3s ease;
+    }
+
+    .c-breadcrumb__link:hover {
+      text-shadow:
+        0 0 0.8rem rgba(255, 255, 255, 0.8),
+        0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .c-header {
+      margin-bottom: 4rem;
+    }
+
+    .c-header__title {
+      font-size: 3rem;
+      color: #fff;
+    }
+
+    .c-componentList {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .c-componentCard {
+      background: #2a2a2a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-0.25rem);
+        box-shadow:
+          0 0 0.8rem rgba(255, 255, 255, 0.8),
+          0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .c-componentCard__title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .c-componentCard__description {
+      margin-bottom: 1rem;
+      color: #888;
+    }
+
+    .c-componentCard__button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .c-componentCard__link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+
+      &:hover .c-componentCard__button {
+        background: #fff;
+        color: #1a1a1a;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="l-container">
+    <nav class="c-breadcrumb">
+      <a href="../" class="c-breadcrumb__link">Home</a> / Links
+    </nav>
+
+    <header class="c-header">
+      <h1 class="c-header__title">Link Components</h1>
+    </header>
+
+    <div class="c-componentList">
+      <article class="c-componentCard">
+        <a href="./underline-slide-ltr/" class="c-componentCard__link">
+          <h2 class="c-componentCard__title">Underline Slide (LTR)</h2>
+          <p class="c-componentCard__description">左から右にスライドするアンダーライン</p>
+          <span class="c-componentCard__button">View Demo</span>
+        </a>
+      </article>
+      <!-- 今後ここに追加 -->
+    </div>
+  </div>
+</body>
+
+</html>

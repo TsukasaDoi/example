@@ -49,12 +49,12 @@ a {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 2px;
   background: #cc8550;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -63,6 +63,6 @@ a {
 }
 
 .c-animatedLink.is-leaving::after {
-  transform-origin: right;
+  transform-origin: left;
   transform: scaleX(0);
 }

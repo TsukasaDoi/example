@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text-slide-up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+  /* パンくずリストのスタイル */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .c-breadcrumb {
+    margin-bottom: 2rem;
+
+    >a {
+      text-decoration: underline;
+    }
+  }
+
+  .c-breadcrumb__link {
+    color: #000;
+    transition: all .3s ease;
+  }
+
+  .c-breadcrumb__link:hover {
+    text-shadow:
+      0 0 0.8rem rgba(0, 0, 0, 0.8),
+      0 2px 4px rgba(255, 255, 255, 0.3);
+  }
+</style>
+
+<body>
+  <!-- パンくずリスト -->
+  <nav class="c-breadcrumb">
+    <a href="../../index.html" class="c-breadcrumb__link">Home</a>
+    <span> / </span>
+    <a href="../index.html" class="c-breadcrumb__link">Links</a>
+    <span> / </span>
+    <p>text-slide-up</p>
+  </nav>
+
+  <section>
+    <div class="l-container">
+      <a href="/" class="c-link">
+        <span>Hover me</span>
+        <span>Hover me</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- JavaScriptの読み込み -->
+  <script src="main.js"></script>
+</body>
+
+</html>

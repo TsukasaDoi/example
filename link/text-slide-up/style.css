@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* 
+共通CSS
+不要なら消してください。
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+ 共通CSSここまで
+ */
+
+.l-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.c-link {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000;
+  border: #000 solid 1px;
+  border-radius: .5rem;
+  height: 4.75rem;
+  overflow: hidden;
+
+  >span {
+    padding: 1rem 1.5rem;
+    text-box-trim: trim-both;
+    transition: all .4s ease;
+    transform: translateY(0);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      >span {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}

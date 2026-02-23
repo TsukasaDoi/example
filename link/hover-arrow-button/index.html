@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>link-underline-ltr</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+  /* パンくずリストのスタイル */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .c-breadcrumb {
+    margin-bottom: 2rem;
+
+    >a {
+      text-decoration: underline;
+    }
+  }
+
+  .c-breadcrumb__link {
+    color: #000;
+    transition: all .3s ease;
+  }
+
+  .c-breadcrumb__link:hover {
+    text-shadow:
+      0 0 0.8rem rgba(0, 0, 0, 0.8),
+      0 2px 4px rgba(255, 255, 255, 0.3);
+  }
+</style>
+
+<body>
+  <!-- パンくずリスト -->
+  <nav class="c-breadcrumb">
+    <a href="../../index.html" class="c-breadcrumb__link">Home</a>
+    <span> / </span>
+    <a href="../index.html" class="c-breadcrumb__link">Links</a>
+    <span> / </span>
+    <p>hover-arrow-button</p>
+  </nav>
+
+  <section>
+    <!-- UIコンポーネント -->
+    <a href="#" class="arrow-button">
+      <span class="label">View More</span>
+      <span class="icon">
+        <!-- SVGそのまま -->
+        <svg viewBox="0 0 512 512" aria-hidden="true">
+          <path fill="currentColor" d="M499.436,225.905L295.858,24.536c-16.623-16.438-43.428-16.305-59.866,0.328
+        c-16.438,16.613-16.294,43.418,0.329,59.856l130.356,128.958H42.329
+        C18.956,213.679,0,232.624,0,255.997
+        c0,23.383,18.956,42.328,42.329,42.328h324.347L236.321,427.273
+        c-16.623,16.438-16.767,43.254-0.329,59.867
+        c16.438,16.622,43.243,16.766,59.866,0.328
+        l203.578-201.368c8.044-7.963,12.564-18.792,12.564-30.102
+        C512,244.685,507.479,233.866,499.436,225.905z" />
+        </svg>
+      </span>
+    </a>
+  </section>
+
+</body>
+
+</html>

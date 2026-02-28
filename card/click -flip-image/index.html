@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Flip Image</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+  /* パンくずリストのスタイル */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .c-breadcrumb {
+    margin-bottom: 2rem;
+
+    >a {
+      text-decoration: underline;
+    }
+  }
+
+  .c-breadcrumb__link {
+    color: #000;
+    transition: all .3s ease;
+  }
+
+  .c-breadcrumb__link:hover {
+    text-shadow:
+      0 0 0.8rem rgba(0, 0, 0, 0.8),
+      0 2px 4px rgba(255, 255, 255, 0.3);
+  }
+</style>
+
+<body>
+  <!-- パンくずリスト -->
+  <nav class="c-breadcrumb">
+    <a href="../../index.html" class="c-breadcrumb__link">Home</a>
+    <span> / </span>
+    <a href="../index.html" class="c-breadcrumb__link">Card</a>
+    <span> / </span>
+    <p>click-flip-image</p>
+  </nav>
+
+  <section>
+    <div class="cat-wrap">
+      <svg class="cat" xmlns="http://www.w3.org/2000/svg" width="150" height="99" viewBox="0 0 150 99" fill="none">
+        <g clip-path="url(#clip0_27_141)">
+          <path
+            d="M2.05667e-05 71.5112C2.05667e-05 99.3252 32.468 98.9711 72.52 98.9711C112.572 98.9711 145.04 99.3252 145.04 71.5112C145.04 43.6973 99.427 21.1484 59.375 21.1484C19.323 21.1484 2.05667e-05 43.6959 2.05667e-05 71.5098V71.5112Z"
+            fill="black" />
+          <path
+            d="M136.268 21.199L147.583 29.317C147.583 29.317 147.952 1.71551 144.92 0.534738C141.887 -0.646035 127.099 14.9251 127.099 14.9251L136.268 21.1976V21.199Z"
+            fill="black" />
+          <path
+            d="M90.5077 21.199L79.1932 29.317C79.1932 29.317 78.8239 1.71551 81.8549 0.534738C84.8859 -0.646035 99.6761 14.9251 99.6761 14.9251L90.5063 21.1976L90.5077 21.199Z"
+            fill="black" />
+          <path
+            d="M74.3896 38.1591C74.3896 55.9039 91.3274 66.9298 112.222 66.9298C133.116 66.9298 150.052 55.9025 150.052 38.1591C150.052 20.4157 133.114 6.02961 112.22 6.02961C91.3259 6.02961 74.3881 20.4142 74.3881 38.1591H74.3896Z"
+            fill="black" />
+          <path
+            d="M93.2867 48.9956C85.3231 48.9956 78.8673 43.5189 78.8673 36.763C78.8673 30.0071 85.3231 24.5303 93.2867 24.5303C101.25 24.5303 107.706 30.0071 107.706 36.763C107.706 43.5189 101.25 48.9956 93.2867 48.9956Z"
+            fill="white" />
+          <path
+            d="M131.888 48.9956C123.924 48.9956 117.468 43.5189 117.468 36.763C117.468 30.0071 123.924 24.5303 131.888 24.5303C139.851 24.5303 146.307 30.0071 146.307 36.763C146.307 43.5189 139.851 48.9956 131.888 48.9956Z"
+            fill="white" />
+          <path
+            d="M93.2867 48.4146C90.3971 48.4146 88.0545 43.198 88.0545 36.763C88.0545 30.3279 90.3971 25.1113 93.2867 25.1113C96.1764 25.1113 98.519 30.3279 98.519 36.763C98.519 43.198 96.1764 48.4146 93.2867 48.4146Z"
+            fill="black" />
+          <path
+            d="M131.888 48.4146C128.998 48.4146 126.656 43.198 126.656 36.763C126.656 30.3279 128.998 25.1113 131.888 25.1113C134.777 25.1113 137.12 30.3279 137.12 36.763C137.12 43.198 134.777 48.4146 131.888 48.4146Z"
+            fill="black" />
+        </g>
+        <defs>
+          <clipPath id="clip0_27_141">
+            <rect width="150" height="99" fill="white" transform="matrix(-1 0 0 1 150 0)" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  </section>
+  <script src="./main.js"></script>
+</body>
+
+</html>

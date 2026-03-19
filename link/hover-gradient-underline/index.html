@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hover-gradient-underline</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<style>
+  /* パンくずリストのスタイル */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .c-breadcrumb {
+    margin-bottom: 2rem;
+
+    >a {
+      text-decoration: underline;
+    }
+  }
+
+  .c-breadcrumb__link {
+    color: #000;
+    transition: all .3s ease;
+  }
+
+  .c-breadcrumb__link:hover {
+    text-shadow:
+      0 0 0.8rem rgba(0, 0, 0, 0.8),
+      0 2px 4px rgba(255, 255, 255, 0.3);
+  }
+</style>
+
+<body>
+  <!-- パンくずリスト -->
+  <nav class="c-breadcrumb">
+    <a href="../../index.html" class="c-breadcrumb__link">Home</a>
+    <span> / </span>
+    <a href="../index.html" class="c-breadcrumb__link">Links</a>
+    <span> / </span>
+    <p>hover-gradient-underline</p>
+  </nav>
+
+  <section>
+    <!-- UIコンポーネント -->
+    <div class="l-container">
+      <a href="#" class="c-gradientUnderlineLink js-gradientUnderlineLink">
+        <span class="c-gradientUnderlineLink__label">Hover me</span>
+      </a>
+    </div>
+  </section>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>

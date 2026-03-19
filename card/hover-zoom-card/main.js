@@ -1,0 +1,1 @@
+// hover-zoom-card はCSSのみで完結するコンポーネントです

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hover-zoom-card</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+  /* パンくずリストのスタイル */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .c-breadcrumb {
+    margin-bottom: 2rem;
+
+    >a {
+      text-decoration: underline;
+    }
+  }
+
+  .c-breadcrumb__link {
+    color: #000;
+    transition: all .3s ease;
+  }
+
+  .c-breadcrumb__link:hover {
+    text-shadow:
+      0 0 0.8rem rgba(0, 0, 0, 0.8),
+      0 2px 4px rgba(255, 255, 255, 0.3);
+  }
+</style>
+
+<body>
+  <!-- パンくずリスト -->
+  <nav class="c-breadcrumb">
+    <a href="../../index.html" class="c-breadcrumb__link">Home</a>
+    <span> / </span>
+    <a href="../index.html" class="c-breadcrumb__link">Card</a>
+    <span> / </span>
+    <p>hover-zoom-card</p>
+  </nav>
+
+  <!-- ここから貼り付けるだけでOK ↓↓↓ -->
+  <section>
+    <div class="card-list">
+
+      <article class="card-item">
+        <a class="card-link" href="#">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="山の風景">
+          </div>
+          <div class="card-body">
+            <h2 class="card-ttl">山に呼ばれる季節</h2>
+            <p class="card-text">標高3000mを超える稜線を歩くと、日常のノイズが一切消え去り、足音と風だけが残る。その静けさがクセになって、また来てしまう。</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="card-item">
+        <a class="card-link" href="#">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="料理の写真">
+          </div>
+          <div class="card-body">
+            <h2 class="card-ttl">夜の厨房、一人のリズム</h2>
+            <p class="card-text">誰もいない深夜のキッチンで、ゆっくりと包丁を動かす。材料と向き合うこの時間が、一日の中で一番自分らしい。</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="card-item">
+        <a class="card-link" href="#">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80" alt="デスクワーク">
+          </div>
+          <div class="card-body">
+            <h2 class="card-ttl">コードとデザインの境界線</h2>
+            <p class="card-text">Figmaで描いたビジョンをブラウザで動かす瞬間——その「形になる感覚」がエンジニアリングを続ける理由だと、今日もまた思う。</p>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </section>
+  <!-- ここまで ↑↑↑ -->
+</body>
+
+</html>
